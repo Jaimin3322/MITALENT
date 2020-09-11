@@ -638,6 +638,8 @@ Media query start
     height: 303px; }
   .slider .social {
     margin-bottom: 12px !important; }
+  .slider .carousel-inner {
+    padding: 100px 0px 0px 0px; }
   .slider .img_text h2 {
     font-size: 30px;
     margin-bottom: 20px !important; }
@@ -647,8 +649,24 @@ Media query start
     right: 20px; }
   .slider .carousel-indicators-numbers li {
     margin: 0px 0px !important; }
+  .slider .fill .row {
+    height: 304px !important;
+    margin: 0px !important; }
   .slider .img_text {
-    left: 0; } }
+    left: 0;
+    position: absolute;
+    top: 50%;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    background-color: rgba(252, 252, 252, 0.4);
+    padding: 15px; }
+  .slider .img_text h2 {
+    width: 100%; }
+  .slider .fill .social_col {
+    background-color: rgba(252, 252, 252, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; } }
 
 @media only screen and (max-width: 575px) {
   .slider .carousel-item {
@@ -662,13 +680,8 @@ Media query start
   .slider .slider_inner {
     width: 300px;
     height: 308px; }
-  .slider .carousel {
-    padding: 85px 0px 0px 0px; }
-  .slider .img_text {
-    position: absolute;
-    top: 50%;
-    left: 50% !important;
-    transform: translate(-50%, -50%); }
+  .slider .carousel-inner {
+    padding: 70px 0px 0px 0px; }
   .tabbing .nav-tabs a {
     font-size: 12px;
     padding: 17px 8px; } }
