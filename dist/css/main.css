@@ -684,4 +684,11 @@ Media query start
     padding: 70px 0px 0px 0px; }
   .tabbing .nav-tabs a {
     font-size: 12px;
-    padding: 17px 8px; } }
+    padding: 17px 8px; }
+  .navbar-brand {
+    position: absolute;
+    width: 120px;
+    line-height: 0;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%; } }
