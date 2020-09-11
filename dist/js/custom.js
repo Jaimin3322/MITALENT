@@ -38,13 +38,15 @@ window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("navbar").style.padding = "30px 0px";
+    document.getElementById("navbar").style.padding = "25px 0px";
     document.getElementById("header").style.backgroundColor = "rgba(255, 255, 255, 0.7)";
     document.getElementById("header").style.boxShadow = "black 0px -2px 10px 2px";
+    document.getElementById("logo").style.width = "180px";
   } else {
-    document.getElementById("navbar").style.padding = "66px 0px";
+    document.getElementById("navbar").style.padding = "50px 0px";
     document.getElementById("header").style.backgroundColor = "transparent";
     document.getElementById("header").style.boxShadow = "none";
+    document.getElementById("logo").style.width = "200px";
   }
 }
 
@@ -79,15 +81,16 @@ $(document).ready(function () {
   $(document).on("scroll", onScroll);
 
   //smoothscroll
-  $('#navbar a[href^="#"]').on('click', function (e) {
+  $('#navbar a[href^="#"], #collapsibleNavbar a[href^="#"]').on('click', function (e) {
     e.preventDefault();
     $(document).off("scroll");
 
-    $('li.nav-item a').each(function () {
+    $('#navbar li.nav-item a, #collapsibleNavbar li.nav-item a').each(function () {
       $(this).removeClass('active');
     })
     $(this).addClass('active');
 
+    
     var target = this.hash,
       menu = target;
     $target = $(target);
@@ -102,11 +105,11 @@ $(document).ready(function () {
 
 function onScroll(event) {
   var scrollPos = $(document).scrollTop();
-  $('#navbar li.nav-item a').each(function () {
+  $('#navbar li.nav-item a, #collapsibleNavbar li.nav-item a').each(function () {
     var currLink = $(this);
     var refElement = $(currLink.attr("href"));
     if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-      $('#navbar li.nav-item a').removeClass("active");
+      // $('#navbar li.nav-item a, #collapsibleNavbar li.nav-item a').removeClass("active");
       currLink.addClass("active");
     }
     else {

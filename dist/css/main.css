@@ -48,8 +48,14 @@ a {
 /*******************
 Header Start
 ********************/
+#navbar a.res_menu {
+  display: block; }
+
+#collapsibleNavbar a.res_menu {
+  display: none; }
+
 #navbar a.nav-link.active {
-  border-bottom: 1px solid black; }
+  border-bottom: 1px solid black !important; }
 
 .navbar-toggler {
   float: right;
@@ -94,6 +100,12 @@ Header Start
 
 .navbar.navbar-light .navbar-toggler-icon {
   background-image: none; }
+
+#logo {
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms; }
 
 .navbar {
   padding: 66px 0px; }
@@ -263,6 +275,7 @@ Slider section start
     position: absolute;
     display: inline-table;
     right: 50px;
+    left: unset;
     bottom: 0;
     margin: 0px 0px 0px auto !important; }
   .slider .carousel-indicators li {
@@ -493,7 +506,7 @@ News section start
     font-size: 14px;
     background-color: #fff;
     position: absolute;
-    right: 30px;
+    right: 15px;
     top: 15px;
     border-radius: 0px;
     box-shadow: none; }
@@ -609,6 +622,14 @@ Media query start
     font-size: 12px; } }
 
 @media only screen and (max-width: 768px) {
+  #navbar a.res_menu {
+    display: none; }
+  #collapsibleNavbar a.res_menu {
+    display: block; }
+  .navbar-brand img {
+    width: 130px; }
+  #search {
+    display: none; }
   .slider .carousel {
     min-height: 257px; }
   .slider .carousel-inner, .slider .carousel-item, .slider .fill {
@@ -638,6 +659,16 @@ Media query start
     width: 100%; }
   .slider .carousel-indicators li.active::before {
     width: 19px; }
+  .slider .slider_inner {
+    width: 300px;
+    height: 308px; }
+  .slider .carousel {
+    padding: 85px 0px 0px 0px; }
+  .slider .img_text {
+    position: absolute;
+    top: 50%;
+    left: 50% !important;
+    transform: translate(-50%, -50%); }
   .tabbing .nav-tabs a {
     font-size: 12px;
     padding: 17px 8px; } }
